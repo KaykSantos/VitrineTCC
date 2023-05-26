@@ -11,10 +11,75 @@
 </head>
 <body>
     <header>
-        <p>ARS LIBRI</p>
+        <p>Pontos turísticos</p>
     </header>
     <main>
-        
+        <div id="section">
+        </div>        
     </main>
+    <script>
+        const places = [
+            {
+                "id": 1,
+                "nome": "Torre Eiffel",
+                "img": "torre-eiffel.png",
+                "desc": "Quer conhecer os maiores pontos turísticos do mundo? Então, Paris não pode ficar fora dessa lista. A França é um dos países mais visitados e quase “parada obrigatória” de quem visita à Europa. Além do Museu do Louvre, que atrai turistas do mundo inteiro, a Torre Eiffel é o monumento marcante da capital francesa.",
+                "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20995.54939256391!2d2.2421611037537987!3d48.86881807103718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTorre%20Eiffel!5e0!3m2!1spt-BR!2sbr!4v1685110812162!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;'' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+              },
+            {
+                "id": 2,
+                "nome": "Cristo Redentor",
+                "img": "cristo-redentor.png",
+                "desc": "Eleito como uma das Sete Maravilhas do Mundo, o Cristo Redentor atrai turistas do mundo todo há 100 anos. No morro do Corcovado, em meio ao Parque Nacional da Tijuca, os visitantes ainda podem desfrutar de uma vista privilegiada do Rio de Janeiro.",
+                "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14695.799450512404!2d-43.22071387913932!3d-22.952073518953128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997fd5984aa13f%3A0x9dc984d7019502de!2sCristo%20Redentor!5e0!3m2!1spt-BR!2sbr!4v1685111166596!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;'' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+              },
+            {
+                "id": 3,
+                "nome": "Taj Mahal",
+                "img": "taj-mahal.png",
+                "desc": "A Índia possui diferentes pontos turísticos, porém, com certeza, o Taj Mahal está no topo deles. São vários motivos para que ele seja um dos pontos turísticos mais visitados do mundo, mas o principal é justamente o porquê ele foi construído.",
+                "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12356.564260599092!2d-43.225062400698924!3d-22.963903716314665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd59c39c03753%3A0xec042ea8f6b96518!2sTaj%20Mahal%20Restaurante!5e0!3m2!1spt-BR!2sbr!4v1685111236599!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;'' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+            },
+            {
+                "id": 4,
+                "nome": "Lago Peyto",
+                "img": "lago-peyto.png",
+                "desc": "Situado no Canadá, o Lago Peyto já foi eleito o lugar mais bonito do mundo por conta de suas águas cristalinas azul-turquesa e a geleira no alto das Montanhas Rochosas. Assim, é um dos destinos mais procurados por turistas a passar pelo país.",
+                "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16625.875831656904!2d-116.53796649305485!3d51.724781669781194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537778716d70aaaf%3A0xa7adc4f7892b437b!2sLago%20Peyto!5e0!3m2!1spt-BR!2sbr!4v1685111268863!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;'' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+            },
+            {
+                "id": 5,
+                "nome": "Ponte Golden State",
+                "img": "ponte-golden-state.png",
+                "desc": "Talvez um dos lugares mais famosos do mundo, a ponte Golden State, localizada em São Francisco, nos EUA, também é considerada um dos maiores pontos turísticos do mundo. Construída em 1937 para conectar São Francisco a Marin County, ela é a maior ponte suspensa do planeta, com quase 3 km. ",
+                "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8914.42946482089!2d-122.48505787358036!3d37.819868577848396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808586deffffffc3%3A0xcded139783705509!2sPonte%20Golden%20Gate!5e0!3m2!1spt-BR!2sbr!4v1685111342848!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;'' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+            },
+            {
+                "id": 6,
+                "nome": "Estátua da Liberdade",
+                "img": "estatua-da-liberdade.png",
+                "desc": "Possivelmente, a Estátua da Liberdade é um dos monumentos mais famosos e, portanto, localizada no lugar mais famoso do mundo. Cartão postal de Nova York e dos Estados Unidos, além de uma personagem presente em muitos filmes e séries, a estátua foi projetada pelo mesmo criador da Torre Eiffel, Gustave Eiffel.",
+                "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12101.225628702425!2d-74.05477866953126!3d40.6892489442549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25090129c363d%3A0x40c6a5770d25022b!2sEstatua%20da%20Liberdade!5e0!3m2!1spt-BR!2sbr!4v1685111420023!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;'' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+            },
+            {
+                "id": 7,
+                "nome": "Basílica de Notre-Dame",
+                "img": "basilica-notre-dame.png",
+                "desc": "Construída entre os anos de 1823 e 1829 em estilo Neogótico, a Basílica de Notre-Dame fica no distrito de Ville-Marie, em Montreal, Canadá. A basílica é considerada uma das mais preciosas construções do patrimônio religioso do Quebec.",
+                "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11185.103489370444!2d-73.56639866614086!3d45.504524939118006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a575897713d%3A0x1ffcef9f1d0d96aa!2sBas%C3%ADlica%20de%20Notre-Dame!5e0!3m2!1spt-BR!2sbr!4v1685111508194!5m2!1spt-BR!2sbr' width='400' height='300' style='border:0;'' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+            }
+        ]
+        const section = document.getElementById('section');  
+        for(c = 0; c < places.length; c++){
+            let content = '<div class="card">';
+            content += '<h2>'+places[c].nome+'</h2>';
+            content += '<img src="imgs/'+places[c].img+'" alt="'+places[c].nome+'" width="400px">';
+            content += '<p>'+places[c].desc+'</p> '; 
+            content += places[c].map;    
+            content += '</div>';
+            section.innerHTML += content;
+        }    
+        
+    </script>
 </body>
 </html>
